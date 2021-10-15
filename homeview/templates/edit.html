@@ -1,0 +1,56 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/update/{{logbyid.id}}">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Update Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label"> Id:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="logid" id="id_logid" required maxlength="20" value="{{ logbyid.logid }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">File Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="logname" id="id_logname" required maxlength="100" value="{{ logbyid.logname }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Log Date:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="logdate" id="id_logdate" required maxlength="254" value="{{ logbyid.logdate }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Log State:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="logstate" id="id_logstate" required maxlength="15" value="{{ logbyid.logstate }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">Update</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  

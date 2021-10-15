@@ -1,0 +1,23 @@
+
+pip install Django
+pip install mysqlclient
+python manage.py makemigrations
+python manage.py migrate
+
+python -m venv venv
+venv\Scripts\activate.bat
+python manage.py runserver
+
+
+
+django-admin startproject iotbotnet
+move iotbotnet\manage.py ./
+move iotbotnet\iotbotnet\* iotbotnet
+rmdir iotbotnet\iotbotnet
+python manage.py runserver
+
+python manage.py startapp homeview
+
+https://realpython.com/get-started-with-django-1/?__cf_chl_captcha_tk__=pmd_1bf382779a2e10d20e2bdaa0a2625995e5fcc18d-1627911244-0-gqNtZGzNAs2jcnBszQm6
+
+https://data-flair.training/blogs/django-database/
